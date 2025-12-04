@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PCC - Professional Coding Classes</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6fc;
+}
+
+/* Header */
+header{
+    background:#6e91f4;
+    color:white;
+    padding:40px 20px;
+    text-align:center;
+    position:relative;   /* ✅ MOST IMPORTANT LINE */
+}
+
+
+/* Navigation */
+nav{
+    background:white;
+    padding:10px;
+    text-align:center;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+nav a{
+    text-decoration:none;
+    color:#121c38;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+/* Container */
+.container{
+    width:90%;
+    margin:auto;
+    padding:20px;
+}
+
+/* Section Title */
+h2{
+    color:#312ed7;
+    margin-bottom:10px;
+}
+
+/* Intro Text */
+.intro{
+    background:white;
+    padding:15px 20px;
+    margin-bottom:20px;
+    border-radius:8px;
+    box-shadow:0 2px 4px rgba(0,0,0,0.1);
+    line-height:1.6;
+}
+
+/* Courses */
+.courses{
+    display:flex;
+    gap:20px;
+}
+
+.course{
+    background:white;
+    padding:15px;
+    border-radius:8px;
+    box-shadow:0 2px 4px rgba(0,0,0,0.1);
+    width:30%;
+}
+
+.course h3{
+    color:#6393fc;
+}
+
+.course p{
+    color:#444;
+    font-size:14px;
+    line-height:1.6;
+}
+
+button{
+    background:#2b4180;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* Testimonials */
+.testimonials{
+    display:flex;
+    gap:20px;
+}
+
+.review{
+    background:white;
+    padding:15px;
+    border-radius:8px;
+    width:45%;
+    box-shadow:0 2px 4px rgba(0,0,0,0.1);
+}
+
+.review h4{
+    color:#29498e;
+    margin-bottom:5px;
+}
+
+/* Enrollment */
+.enroll{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+}
+
+.enroll input{
+    width:100%;
+    padding:8px;
+    margin:6px 0;
+}
+
+/* Footer */
+footer{
+    background:#1e293b;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+.logo{
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    overflow:hidden;
+    background:white;
+    border:3px solid white;
+}
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+/* Social links */
+.social-icons{
+   position:absolute;
+   top:15px;
+   right:15px;
+}
+
+.social-icons img{
+   width:32px;
+   margin-left:10px;
+   cursor:pointer;
+   transition:0.3s;
+}
+
+.social-icons img:hover{
+   transform:scale(1.2);
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>PCC – Professional Coding Classes</h1>
+    <p>India’s Trusted Online Learning & Skill Development Platform</p>
+<div class="logo">
+      <img src="data:image/jpeg;base64,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" alt="PCC Logo">
+</div>
+<div class="social-icons">
+
+<a href="https://wa.me/919876543210" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+<a href="https://www.youtube.com/@piyushcoachingclasses6810" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+</a>
+
+</div>
+
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Testimonials</a>
+    <a href="#">Enroll</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+<!-- Intro -->
+<div class="intro">
+    <p>
+        PCC (Professional Coding Classes) is a modern online learning platform created to help students,
+        beginners, and working professionals gain practical skills in technology, programming, and digital careers.
+        Our expert-designed courses focus on hands-on learning, real-world projects, and step-by-step guidance so that
+        learners can build confidence and job-ready skills from the comfort of their homes.
+    </p>
+
+    <p>
+        We believe quality education should be affordable, easy to understand, and accessible to everyone.
+        Thousands of students trust PCC to start their coding journey and boost their professional growth.
+    </p>
+</div>
+
+<!-- Courses -->
+<h2>Our Popular Courses</h2>
+
+<div class="courses">
+
+    <div class="course">
+        <h3>Web Development</h3>
+        <p>
+            Learn complete website development using HTML and CSS.
+            Build responsive pages, modern layouts, and professional websites from scratch
+            with practical exercises and industry-style projects.
+        </p>
+        <button>Enroll Now</button>
+    </div>
+
+    <div class="course">
+        <h3>Python Programming</h3>
+        <p>
+            Master Python fundamentals, logic building, and real-world problem solving.
+            Perfect for beginners aiming for software development, automation,
+            and basic data analysis roles.
+        </p>
+        <button>Enroll Now</button>
+    </div>
+
+    <div class="course">
+        <h3>Digital Marketing</h3>
+        <p>
+            Learn SEO, social media marketing, content creation,
+            and online advertising strategies to grow brands and start freelancing
+            or digital agency careers.
+        </p>
+        <button>Enroll Now</button>
+    </div>
+
+</div>
+
+<!-- Testimonials -->
+<h2>Student Testimonials</h2>
+
+<div class="testimonials">
+
+    <div class="review">
+        <h4>Yogesh Singh</h4>
+        <p>
+            "PCC helped me learn website development from zero. The teaching method is simple,
+            practical, and very useful for real projects."
+        </p>
+    </div>
+
+    <div class="review">
+        <h4>Ayush Singh</h4>
+        <p>
+            "Amazing platform for beginners. I improved my confidence in coding and now feel ready
+            to start freelancing."
+        </p>
+    </div>
+
+</div>
+
+<!-- Enrollment -->
+<h2>Enroll Now</h2>
+
+<div class="enroll">
+    <input type="text" placeholder="Enter Your Full Name">
+    <input type="email" placeholder="Enter Your Email ID">
+    <input type="text" placeholder="Select Your Course">
+    <button>Submit Enrollment</button>
+</div>
+
+</div>
+
+
+<footer>
+📞 Call/WhatsApp: 78271XXXXX | 📧 support XYZ@pcc.com  
+<br>
+© 2025 PCC • Learn • Code • Succeed
+</footer>
+
+</body>
+</html>
